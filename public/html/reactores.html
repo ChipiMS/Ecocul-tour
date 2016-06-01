@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html ng-app="Projects">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Después de Ecocul-tour - poner el nombre del proyecto -->
+	<title>Ecocul-tour - Reactores plasma para tratar los gases contaminantes </title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bigStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 1025px)" href="../css/mediumStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 715px)" href="../css/smallStyle.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="../js/projects.js"></script>
+
+</head>
+<body ng-controller="main" data-ng-init="init()" ng-click="closeAll()">
+	<main>
+		<nav class="Navigation">
+			<div ng-click="showSmallViews($event)" class="NavigationSmallButton">
+				<div class="fa fa-bars"></div>
+			</div>
+			<div class="NavigationLeft">
+					<a href="/">
+						<img src="../img/icon.jpg">
+					</a>
+					<a href="/">
+						<span>Ecocul-tour</span>
+					</a>
+			</div>
+			<ul class="NavigationCenter">
+				<li class="NavigationItem" id="CloseSidebar" ng-click="closeAll()"><div class="fa fa-times"></div></li>
+				<li class="NavigationItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+				<li class="NavigationItem"><a href="/Objetivo">Objetivo</a></li>
+				<li class="NavigationItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			</ul>
+			<div class="NavigationBlocker"></div>
+		</nav>
+		<article class="Project">
+			<!--Título ////////////////////////////////////////////////////////////////////////////////// -->
+			<div class="ProjectTitle" ng-click="openOtherProjects($event)">Reactores plasma para tratar los gases contaminantes<span class="fa fa-chevron-down"></span></div>
+			<div id="ContainerLeftRight">
+				<div id="TopicsLeft">
+					<div ng-repeat="topic in projects">
+						<div class="TopicLeft">
+							<a href="{{'/Proyectos/'+topic.href}}">{{topic.title}}</a>
+						</div>
+					</div>
+				</div>
+				<div id="ContentRight">
+					<center>
+						<!--Contenido /////////////////////////////////////////////////////////////////// -->
+						<div class="ContentRightContainer">
+							<h1><big><big><tt>Reactores plasma para tratar los gases contaminantes</tt></big></big></h1>
+							
+							<p><i>El Laboratorio de Aplicaciones de Plasmas del Instituto Nacional de Investigaciones Nucleares</i> de la ciudad de Toluca,  presentó un  Diseño de reactores de plasma, para el tratamiento de <b>gases contaminantes</b>, que esperan se pueda aplicar para eliminar los gases contaminantes integrándolo a los escapes de automóviles, y también posiblemente para chimeneas industriales.</p>
+							<img src="../img/img7.jpeg">
+						</div>
+					</center>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+		<ul class="FooterMenu">
+			<li class="FooterItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			<li class="FooterItem"><a href="/Objetivo">Objetivo</a></li>
+			<li class="FooterItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+		</ul>
+		<p class="FooterCopyright">2016 Los Hobbits</p>
+	</footer>
+</body>
+</html>

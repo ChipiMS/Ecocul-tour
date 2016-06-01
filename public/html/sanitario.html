@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html ng-app="Projects">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Después de Ecocul-tour - poner el nombre del proyecto -->
+	<title>Ecocul-tour - Equipo para fotodegradación de contaminantes orgánicos </title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bigStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 1025px)" href="../css/mediumStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 715px)" href="../css/smallStyle.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="../js/projects.js"></script>
+
+</head>
+<body ng-controller="main" data-ng-init="init()" ng-click="closeAll()">
+	<main>
+		<nav class="Navigation">
+			<div ng-click="showSmallViews($event)" class="NavigationSmallButton">
+				<div class="fa fa-bars"></div>
+			</div>
+			<div class="NavigationLeft">
+					<a href="/">
+						<img src="../img/icon.jpg">
+					</a>
+					<a href="/">
+						<span>Ecocul-tour</span>
+					</a>
+			</div>
+			<ul class="NavigationCenter">
+				<li class="NavigationItem" id="CloseSidebar" ng-click="closeAll()"><div class="fa fa-times"></div></li>
+				<li class="NavigationItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+				<li class="NavigationItem"><a href="/Objetivo">Objetivo</a></li>
+				<li class="NavigationItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			</ul>
+			<div class="NavigationBlocker"></div>
+		</nav>
+		<article class="Project">
+			<!--Título ////////////////////////////////////////////////////////////////////////////////// -->
+			<div class="ProjectTitle" ng-click="openOtherProjects($event)">Equipo para fotodegradación de contaminantes orgánicos<span class="fa fa-chevron-down"></span></div>
+			<div id="ContainerLeftRight">
+				<div id="TopicsLeft">
+					<div ng-repeat="topic in projects">
+						<div class="TopicLeft">
+							<a href="{{'/Proyectos/'+topic.href}}">{{topic.title}}</a>
+						</div>
+					</div>
+				</div>
+				<div id="ContentRight">
+					<center>
+						<!--Contenido /////////////////////////////////////////////////////////////////// -->
+						<div class="ContentRightContainer">
+							<h1>Sanitario mecatrónico automatizado</h1>
+							
+							<img src="../img/img4.jpg">
+							<p>El laboratorio <i>Espacios de Innovación Tecnológica</i>, en colaboración con la <i>Facultad de Ingeniería de la Universidad Nacional Autónoma de México</i>,  trabajan en la creación de un sanitario ecológico alternativo, llegando a un diseño mecatrónico automatizado. También tienen modelos más sencillos, como el de la siguiente foto, que es un sanitario que no utiliza agua, también llamado “baño seco”. Todos los modelos que proponen parten de la premisa de evitar el desperdicio de agua, y separar los desechos sólidos de los líquidos para transformarlos en <i>composta</i> La composta, el compostaje, composto o abono orgánico es el producto que se obtiene del compostaje y compuestos que forman o formaron parte de seres vivos en un conjunto de productos de origen animal y vegetal.</p>
+							<img src="../img/img3.jpg">
+						</div>
+					</center>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+		<ul class="FooterMenu">
+			<li class="FooterItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			<li class="FooterItem"><a href="/Objetivo">Objetivo</a></li>
+			<li class="FooterItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+		</ul>
+		<p class="FooterCopyright">2016 Los Hobbits</p>
+	</footer>
+</body>
+</html>

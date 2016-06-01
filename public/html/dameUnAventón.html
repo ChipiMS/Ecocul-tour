@@ -1,0 +1,82 @@
+<!doctype html>
+<html ng-app="Projects">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Después de Ecocul-tour - poner el nombre del proyecto -->
+	<title>Ecocul-tour - Dame un aventón</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bigStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 1025px)" href="../css/mediumStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 715px)" href="../css/smallStyle.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="../js/projects.js"></script>
+
+</head>
+<body ng-controller="main" data-ng-init="init()" ng-click="closeAll()">
+	<main>
+		<nav class="Navigation">
+			<div ng-click="showSmallViews($event)" class="NavigationSmallButton">
+				<div class="fa fa-bars"></div>
+			</div>
+			<div class="NavigationLeft">
+					<a href="/">
+						<img src="../img/icon.jpg">
+					</a>
+					<a href="/">
+						<span>Ecocul-tour</span>
+					</a>
+			</div>
+			<ul class="NavigationCenter">
+				<li class="NavigationItem" id="CloseSidebar" ng-click="closeAll()"><div class="fa fa-times"></div></li>
+				<li class="NavigationItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+				<li class="NavigationItem"><a href="/Objetivo">Objetivo</a></li>
+				<li class="NavigationItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			</ul>
+			<div class="NavigationBlocker"></div>
+		</nav>
+		<article class="Project">
+			<!--Título ////////////////////////////////////////////////////////////////////////////////// -->
+			<div class="ProjectTitle" ng-click="openOtherProjects($event)">Dame un avetón<span class="fa fa-chevron-down"></span></div>
+			<div id="ContainerLeftRight">
+				<div id="TopicsLeft">
+					<div ng-repeat="topic in projects">
+						<div class="TopicLeft">
+							<a href="{{'/Proyectos/'+topic.href}}">{{topic.title}}</a>
+						</div>
+					</div>
+				</div>
+				<div id="ContentRight">
+					<center>
+						<!--Contenido /////////////////////////////////////////////////////////////////// -->
+						<div class="ContentRightContainer">
+							<h1>Dame un aventón</h1>
+							<h2>Plataforma pública de Internet y móvil en la cual usuarios comparten su auto, dando “aventones”.</h2>
+							<p>Dame un Aventón (www.dameunaventon.com.mx) es la primera plataforma pública de Internet móvil en México de carpooling, es decir, donde los usuarios pueden compartir su auto a amigos o más personas y dar un aventón a cualquier parte de México y desde cualquier lugar. Esta plataforma también sirve para los usuarios que estén buscando un ride o aventón a cierta Ciudad o Estado dentro de México. El objetivo de DameUnAventon es que la gente ahorre gasolina, comparta su auto, ayude al medio ambiente, disminuya el tráfico y también conozca a más personas de una manera divertida. Creemos que si un auto lleva más pasajeros en lugar de ir una sola persona, el daño al medio ambiente será mucho menor, bajará el  tráfico sobre todo en Ciudades grandes, y además permitirá que la gente que le interesa ayudar al medio ambiente, podrá encontrar en nuestra página una forma de conocer a gente con sus mismos intereses.
+ 
+							Los usuarios solo deben ingresar a la página y crear una cuenta y a través de su cuenta en Facebook. ¿Por qué es indispensable tener una cuenta en Facebook? Porque de esa manera tanto conductores como pasajeros, pueden indagar con quién van a compartir auto o quién se va a subir a su auto, pueden conocer sus intereses, amigos en común, fotografías, etc. y tomar una decisión con esa información. Una vez creada la cuenta, el usuario podrá publicar una ruta o aventón, en donde seleccionará el monto que cobrará por pasajero, el punto de origen, el punto de destino, cuántos lugares está dispuesto a compartir, la fecha, la hora de salida, así como la hora de regreso. Los aventones podrán ser unidireccionales, es decir, desde el punto de origen al punto de destino nada más, o bien redondos, permitiendo que los pasajeros tengan varias opciones.
+ 
+							Además, DameUnAventon está conectado a Google para mostrar en mapas las rutas que la gente publica, de tal forma que los pasajeros pueden ver el trayecto que van a hacer, indicando los puntos de origen y puntos de destino.</p>
+							<img src="../img/DUA.jpg">
+						</div>
+					</center>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+		<ul class="FooterMenu">
+			<li class="FooterItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			<li class="FooterItem"><a href="/Objetivo">Objetivo</a></li>
+			<li class="FooterItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+		</ul>
+		<p class="FooterCopyright">2016 Los Hobbits</p>
+	</footer>
+</body>
+</html>

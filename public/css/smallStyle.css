@@ -1,0 +1,77 @@
+#ContactSupport{
+	display: none;
+}
+#ContentRight{
+	width: 100%;
+	margin-left: 0px;
+	padding-bottom: 40px;
+}
+.ContentRightContainer h1{
+	padding-top: 32px;
+}
+.ContentRightContainer h2{
+	padding-top: 10px;
+}
+#DocsMain h2{
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.ProjectTitle{
+	padding-left: 16px;
+	width: initial;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.ProjectTitle .fa{
+	display: initial;
+    padding-left: 10px;
+    font-size: 13px;
+}
+.ResourcesCard{
+	padding: 16px;
+	height: 48px;
+	width: calc(100% - 32px);
+}
+.ResourcesCard div{
+	
+}
+.ResourcesCard .fa{
+	top: 34px;
+}
+.ResourcesCard h3{
+    line-height: 22px;
+    font-size: 14px;
+}
+.ResourcesCard img{
+	
+}
+.ResourcesCard p{
+	line-height: 20px;
+	font-size: 13px;
+}
+#TopicsLeft{
+	z-index: 1;
+	left: -100%;
+	transition: .35s left;
+}
+@keyframes ShowTopics{
+	from{
+		left: -100%;
+	}
+	to{
+		left: 0;
+	}
+}
+.TopicsLeftSmallVisible{
+    left: 0 !important;
+    animation-name: ShowTopics;
+	animation-duration: .35s;
+}
+.WhiteBlueGroup .Blue{
+	padding-top: 33px !important;
+}
+.WhiteTopic{
+	padding-top: 12px;
+	font-size: 28px;
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html ng-app="Projects">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Después de Ecocul-tour - poner el nombre del proyecto -->
+	<title>Ecocul-tour - Producción de biodiesel a partir de microalgas </title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bigStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 1025px)" href="../css/mediumStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 715px)" href="../css/smallStyle.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="../js/projects.js"></script>
+
+</head>
+<body ng-controller="main" data-ng-init="init()" ng-click="closeAll()">
+	<main>
+		<nav class="Navigation">
+			<div ng-click="showSmallViews($event)" class="NavigationSmallButton">
+				<div class="fa fa-bars"></div>
+			</div>
+			<div class="NavigationLeft">
+					<a href="/">
+						<img src="../img/icon.jpg">
+					</a>
+					<a href="/">
+						<span>Ecocul-tour</span>
+					</a>
+			</div>
+			<ul class="NavigationCenter">
+				<li class="NavigationItem" id="CloseSidebar" ng-click="closeAll()"><div class="fa fa-times"></div></li>
+				<li class="NavigationItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+				<li class="NavigationItem"><a href="/Objetivo">Objetivo</a></li>
+				<li class="NavigationItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			</ul>
+			<div class="NavigationBlocker"></div>
+		</nav>
+		<article class="Project">
+			<!--Título ////////////////////////////////////////////////////////////////////////////////// -->
+			<div class="ProjectTitle" ng-click="openOtherProjects($event)">Producción de biodiesel a partir de microalgas<span class="fa fa-chevron-down"></span></div>
+			<div id="ContainerLeftRight">
+				<div id="TopicsLeft">
+					<div ng-repeat="topic in projects">
+						<div class="TopicLeft">
+							<a href="{{'/Proyectos/'+topic.href}}">{{topic.title}}</a>
+						</div>
+					</div>
+				</div>
+				<div id="ContentRight">
+					<center>
+						<!--Contenido /////////////////////////////////////////////////////////////////// -->
+						<div class="ContentRightContainer">
+							<h1><big><big><tt>Producción de biodiesel a partir de microalgas</tt></big></big></h1>
+
+							<img src="../img/img2.jpg">
+							<p>En un laboratorio del <i>Instituto Politécnico Nacional</i> se desarrolla el proceso de producción de biocombustible a partir de algas. La rápida reproducción de algas es lo que hace del biocombustible un recurso inagotable, en comparación con la escasez de los combustibles provenientes del petróleo, puesto que estos no son renovables y se agontan con el paso del tiempo. Además, produce menor cantidad de <b>C0<sub>2</sub></b>, principal gas causante del <b>efecto invernadero</b>. El efecto invernadero es una elevación de la temperatura de la atmósfera que se produce como resultado de la concentración en la atmósfera de gases.</p>
+							<img src="../img/img0.jpg">
+							<img src="../img/img1.jpg">
+						</div>
+					</center>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+		<ul class="FooterMenu">
+			<li class="FooterItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			<li class="FooterItem"><a href="/Objetivo">Objetivo</a></li>
+			<li class="FooterItem"><a href="Proyectos">Proyectos sustentables</a></li>
+		</ul>
+		<p class="FooterCopyright">2016 Los Hobbits</p>
+	</footer>
+</body>
+</html>

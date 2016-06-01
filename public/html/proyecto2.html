@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html ng-app="Projects">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Después de Ecocul-tour - poner el nombre del proyecto -->
+	<title>Ecocul-tour - Torre GSI</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bigStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 1025px)" href="../css/mediumStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 715px)" href="../css/smallStyle.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="../js/projects.js"></script>
+
+</head>
+<body ng-controller="main" data-ng-init="init()" ng-click="closeAll()">
+	<main>
+		<nav class="Navigation">
+			<div ng-click="showSmallViews($event)" class="NavigationSmallButton">
+				<div class="fa fa-bars"></div>
+			</div>
+			<div class="NavigationLeft">
+					<a href="/">
+						<img src="../img/icon.jpg">
+					</a>
+					<a href="/">
+						<span>Ecocul-tour</span>
+					</a>
+			</div>
+			<ul class="NavigationCenter">
+				<li class="NavigationItem" id="CloseSidebar" ng-click="closeAll()"><div class="fa fa-times"></div></li>
+				<li class="NavigationItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+				<li class="NavigationItem"><a href="/Objetivo">Objetivo</a></li>
+				<li class="NavigationItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			</ul>
+			<div class="NavigationBlocker"></div>
+		</nav>
+		<article class="Project">
+			<!--Título ////////////////////////////////////////////////////////////////////////////////// -->
+			<div class="ProjectTitle" ng-click="openOtherProjects($event)">Torre GSI<span class="fa fa-chevron-down"></span></div>
+			<div id="ContainerLeftRight">
+				<div id="TopicsLeft">
+					<div ng-repeat="topic in projects">
+						<div class="TopicLeft">
+							<a href="{{'/Proyectos/'+topic.href}}">{{topic.title}}</a>
+						</div>
+					</div>
+				</div>
+				<div id="ContentRight">
+					<center>
+						<!--Contenido /////////////////////////////////////////////////////////////////// -->
+						<div class="ContentRightContainer">
+							<h1>Torre GSI</h1>
+							<p>Este edificio impresionante estará ubicado nada más y nada menos que en la bellísima ciudad de Cancún, en México. Será una construcción mixta que contendrá comercios, oficinas, casas particulares y hoteles.
+							El proyecto, fruto del estudio Sanzpont Arquitectura, contempla una estructura amigable con el medioambiente. Tendrá 20 niveles y dos cuerpos verticales conectados mediante puentes habitables con un jardín interior que le dará vida al edificio.</p>
+							<img src="../img/frontal.jpg">
+							<p>Para maximizar la autorregulación de su temperatura, la torre gozará de una fachada ventilada de alucobond en forma de escamas, lo cual la protegerá del sol en su cara poniente. Por su parte, la fachada oriental estará recubierta con un juego de cristales serigrafiados, sandblasteados y transparentes desde donde se podrá ver el verde del campo de golf de Puerto Cancún y el azul del mar.</p>
+							<img src="../img/Lateral.jpg">
+							<p>Como se explica desde la página de Sanzpont Arquitectura, la torre GSI tendrá dos niveles de parking integrados con vegetación en talud y una plaza pública elevada que hará las veces de gran balcón urbano.La forma que presenta el diseño de este complejo arquitectónico ya es considerada por muchos como una verdadera pieza de arte que embellecerá aún más a la Avenida Bonampak de Puerto Cancún.</p>
+							<img src="../img/interno.jpg">
+						</div>
+					</center>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+		<ul class="FooterMenu">
+			<li class="FooterItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			<li class="FooterItem"><a href="/Objetivo">Objetivo</a></li>
+			<li class="FooterItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+		</ul>
+		<p class="FooterCopyright">2016 Los Hobbits</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="Plaid">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Ecocul-tour - Objetivo</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bigStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 1025px)" href="../css/mediumStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 715px)" href="../css/smallStyle.css">
+
+	<!-- SPELLS -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script><!-- load angular -->
+	<script src="../js/core.js"></script>
+
+</head>
+<body ng-controller="main" ng-click="closeAll()">
+	<main>
+		<nav class="Navigation">
+			<div ng-click="showSmallViews($event)" class="NavigationSmallButton">
+				<div class="fa fa-bars"></div>
+			</div>
+			<div class="NavigationLeft">
+					<a href="/">
+						<img src="../img/icon.jpg">
+					</a>
+					<a href="/">
+						<span>Ecocul-tour</span>
+					</a>
+			</div>
+			<ul class="NavigationCenter">
+				<li class="NavigationItem" id="CloseSidebar" ng-click="closeAll()"><div class="fa fa-times"></div></li>
+				<li class="NavigationItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+				<li class="NavigationItem">Objetivo</li>
+				<li class="NavigationItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			</ul>
+			<div class="NavigationBlocker"></div>
+		</nav>
+		<article class="MainPage">
+			<h1>Objetivos</h1>
+			<p>1.Dar a conocer la importancia del desarrollo sustentable. </p>
+			<p>2. Poner a disponibilidad los proyectos sustentables que tiene México. </p>
+			<p>3. Al dar a conocer ésta información pretendemos crear un mayor interes a este tipo de proyectos. </p>
+			<p>4. Gracias a este espacio se espera poner al alcance infromación confiable sobre el desarrollo sostenible en México. </p>
+			<h2>¿Por qué es importante conocer esta información?</h2>
+			<p>En la actualidad el cambio climatico, el calentamiento global, la contaminación entre otros, son temas de cada día que perjudican nuestra vida diaria desde que el clima es muy esxtremo, hasta la perdida de especies, pues bien el desarrollo sustentable es la clave para poder lograr mejoras, reducir el impacto que los humanos dejamos a nuestro paso, una de las posibles soluciones que se ofrecen es la educación de las personas para crear conciencia y de esta forma las cosas tomane un rumbo diferente, siendo este el porque se pone a su disposición esta información sobre lo que nuestro País ha logrado en cuestiones del desarrollo sustentable.</p>
+		</article>
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+		<ul class="FooterMenu">
+			<li class="FooterItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			<li class="FooterItem">Objetivo</li>
+			<li class="FooterItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+		</ul>
+		<p class="FooterCopyright">2016 Los Hobbits</p>
+	</footer>
+</body>
+</html>

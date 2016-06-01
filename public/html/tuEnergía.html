@@ -1,0 +1,82 @@
+<!doctype html>
+<html ng-app="Projects">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Después de Ecocul-tour - poner el nombre del proyecto -->
+	<title>Ecocul-tour - TuEnergía</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bigStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 1025px)" href="../css/mediumStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 715px)" href="../css/smallStyle.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="../js/projects.js"></script>
+
+</head>
+<body ng-controller="main" data-ng-init="init()" ng-click="closeAll()">
+	<main>
+		<nav class="Navigation">
+			<div ng-click="showSmallViews($event)" class="NavigationSmallButton">
+				<div class="fa fa-bars"></div>
+			</div>
+			<div class="NavigationLeft">
+					<a href="/">
+						<img src="../img/icon.jpg">
+					</a>
+					<a href="/">
+						<span>Ecocul-tour</span>
+					</a>
+			</div>
+			<ul class="NavigationCenter">
+				<li class="NavigationItem" id="CloseSidebar" ng-click="closeAll()"><div class="fa fa-times"></div></li>
+				<li class="NavigationItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+				<li class="NavigationItem"><a href="/Objetivo">Objetivo</a></li>
+				<li class="NavigationItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			</ul>
+			<div class="NavigationBlocker"></div>
+		</nav>
+		<article class="Project">
+			<!--Título ////////////////////////////////////////////////////////////////////////////////// -->
+			<div class="ProjectTitle" ng-click="openOtherProjects($event)">TuEnergía<span class="fa fa-chevron-down"></span></div>
+			<div id="ContainerLeftRight">
+				<div id="TopicsLeft">
+					<div ng-repeat="topic in projects">
+						<div class="TopicLeft">
+							<a href="{{'/Proyectos/'+topic.href}}">{{topic.title}}</a>
+						</div>
+					</div>
+				</div>
+				<div id="ContentRight">
+					<center>
+						<!--Contenido /////////////////////////////////////////////////////////////////// -->
+						<div class="ContentRightContainer">
+							<h1>TuEnergía</h1>
+							<h2>Producción de energía por medio de un Generador (Eólico o Solar) que se instala en negocios u hogares por medio de una inversión inicial que se recupera mensualmente.</h2>
+							<p>Este proyecto pretende prestar un servicio de producción de energía en donde la empresa coloca un Generador (Eólico o Solar) en el lugar donde se va a usar, ya sea un hogar o un negocio pequeño. El cliente sin el servicio normalmente pagaría un elevado gasto por el servicio de electricidad común. Con TuEnergía el cliente pagaría un recibo de luz menor, pagaría el servicio de la producción de energía y aún así estaría generando un ahorro en el total del gasto original de electricidad. Los sistemas contemplados son de 1kw/h hasta 5kw/h. Los clientes potenciales son aquellos hogares que caen en la tarifa DAC, que son de alto consumo, al estar estos produciendo su energía, requieren menos de la red de CFE por lo cual caen a una tarifa más baja, aumentando así su ahorro. Los contratos se generarían por entre 4 a 6 años, que es lo que tardaría en pagarse el generador, ya que ese costo hundido lo tendría la empresa. Al final del plazo, los clientes pueden decidir si comprar el sistema instalado y continuar usándolo por el plazo de vida útil que es de alrededor de 20 años. Así que tienen la opción de seguir produciendo su energía sin costos adicionales.
+ 
+							TuEnergía se encargaría de todo el trabajo de compra, importación, instalación, monitoreo, seguro y mantenimiento del equipo mientras dure el contrato. El cliente podrá ver a través de una interfaz web que tanta energía esta produciendo su generador gracias a un sencillo sistema de monitoreo. Es necesario contar con el recurso eólico o solar para el funcionamiento del sistema; un generador de este tipo puede costar entre 2000 y 5000 USD, mas diversos costos asociados, por lo que se requiere una inversión inicial fuerte para la empresa pero que se irá recuperando mes con mes. El cliente puede o no pagar un depósito lo cual le reduciría la cantidad de tiempo que tiene que estar con el contrato con la empresa.
+ 
+							A final de cuentas este proyecto beneficia a varias partes, primero al cliente, ya que reduce su gasto en energía eléctrica, el impacto ambiental; concientizándolo sobre el tema de la energía, para la empresa pues genera utilidades el tener cierto numero de generadores operando, emplea a técnicos, analistas y administradores, promueve el uso de las energías renovables en una escala pequeña, es un modelos, que de ser exitoso puede ser replicado en otras partes de la republica y que ya se esta utilizando en otras partes del mundo.</p>
+							<img src="../img/TE.jpg">
+						</div>
+					</center>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+		<ul class="FooterMenu">
+			<li class="FooterItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			<li class="FooterItem"><a href="/Objetivo">Objetivo</a></li>
+			<li class="FooterItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+		</ul>
+		<p class="FooterCopyright">2016 Los Hobbits</p>
+	</footer>
+</body>
+</html>

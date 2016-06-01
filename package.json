@@ -1,0 +1,14 @@
+{
+  "name"         : "Ecocul-tour",
+  "version"      : "0.0.0",
+  "description"  : "Aquí podemos ver todo lo que México realiza en favor del desarrollo sustentable",
+  "main"         : "server.js",
+  "author"       : "Los Hobbits",
+  "dependencies" : {
+    "express"    : "~4.7.2",
+    "mongojs"    : "~2.3.0",
+    "morgan"     : "~1.2.2",
+    "body-parser": "~1.5.2",
+    "method-override": "~2.1.2"
+    }
+}

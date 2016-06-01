@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html ng-app="Projects">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Después de Ecocul-tour - poner el nombre del proyecto -->
+	<title>Ecocul-tour - Puente Bahía Acapulco</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bigStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 1025px)" href="../css/mediumStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 715px)" href="../css/smallStyle.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="../js/projects.js"></script>
+
+</head>
+<body ng-controller="main" data-ng-init="init()" ng-click="closeAll()">
+	<main>
+		<nav class="Navigation">
+			<div ng-click="showSmallViews($event)" class="NavigationSmallButton">
+				<div class="fa fa-bars"></div>
+			</div>
+			<div class="NavigationLeft">
+					<a href="/">
+						<img src="../img/icon.jpg">
+					</a>
+					<a href="/">
+						<span>Ecocul-tour</span>
+					</a>
+			</div>
+			<ul class="NavigationCenter">
+				<li class="NavigationItem" id="CloseSidebar" ng-click="closeAll()"><div class="fa fa-times"></div></li>
+				<li class="NavigationItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+				<li class="NavigationItem"><a href="/Objetivo">Objetivo</a></li>
+				<li class="NavigationItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			</ul>
+			<div class="NavigationBlocker"></div>
+		</nav>
+		<article class="Project">
+			<!--Título ////////////////////////////////////////////////////////////////////////////////// -->
+			<div class="ProjectTitle" ng-click="openOtherProjects($event)">Puente Bahía Acapulco<span class="fa fa-chevron-down"></span></div>
+			<div id="ContainerLeftRight">
+				<div id="TopicsLeft">
+					<div ng-repeat="topic in projects">
+						<div class="TopicLeft">
+							<a href="{{'/Proyectos/'+topic.href}}">{{topic.title}}</a>
+						</div>
+					</div>
+				</div>
+				<div id="ContentRight">
+					<center>
+						<!--Contenido /////////////////////////////////////////////////////////////////// -->
+						<div class="ContentRightContainer">
+							<h1>Puente Bahía Acapulco</h1>
+							<p>Este diseño de puentes colosales de la Ciudad de México basado en Arquitectura BNKR es un enfoque único para el problema de la financiación del proyecto. Sabiendo que el gobierno municipal de Acapulco no sería capaz de financiar un puente de tres kilómetros, BNKR pensado para atraer las inversiones privadas mediante la transformación de la estructura de apoyo a los espacios habitables. Sin un puente para atravesar ella, la bahía de Acapulco es muy inconveniente para todo el año. El puente se completa un ciclo alrededor de la bahía y conectar a las carreteras y caminos existentes.</p>
+							<img src="../img/b1.jpg">
+							<img src="../img/b2.jpg">
+							<p>La calzada y aparcamiento para el puente se encuentra en un tubo cuadrado que se divide la superestructura del sistema de apoyo abajo. La parte superior de este está cubierta en los pasillos, bikepaths y los espacios verdes. Las estructuras de soporte triangular casa de los espacios habitables por encima y por debajo de esta arteria principal. El puente se establece sobre bases semejantes a islas que podrían actuar como muelles para embarcaciones y permiten a los habitantes y visitantes a disfrutar de la bahía en el nivel del agua.</p>
+							<img src="../img/b3.jpg">
+							<img src="../img/b4.jpg">
+							<p>Pocos arquitectos contemporáneos han diseñado puentes habitables y sólo un puñado de los puentes se han construido. Steven Holl ha experimentado con la idea en varios proyectos y Zaha Hadid diseñó uno para atravesar el río Támesis en 1996, pero en su conjunto la idea todavía tiene que ser aceptada plenamente en la era moderna. En la Italia medieval muchos puentes de usos múltiples se construyeron, el ejemplo más famoso sobrevivir siendo el Ponte Vecchio de Florencia. El Ponte Vecchio sin embargo, tiene tiendas a través de ella y no casas.</p>
+							<img src="../img/b5.jpg">
+							<img src="../img/b6.jpg">
+							<img src="../img/b7.jpg">
+						</div>
+					</center>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+		<ul class="FooterMenu">
+			<li class="FooterItem"><a href="/Desarrollo_Sustentable">Desarrollo sustentable</a></li>
+			<li class="FooterItem"><a href="/Objetivo">Objetivo</a></li>
+			<li class="FooterItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+		</ul>
+		<p class="FooterCopyright">2016 Los Hobbits</p>
+	</footer>
+</body>
+</html>

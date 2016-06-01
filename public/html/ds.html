@@ -1,0 +1,67 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="Plaid">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Ecocul-tour - Desarrollo sustentables</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bigStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 1025px)" href="../css/mediumStyle.css">
+	<link rel="stylesheet" media="screen and (max-width: 715px)" href="../css/smallStyle.css">
+
+	<!-- SPELLS -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script><!-- load angular -->
+	<script src="../js/core.js"></script>
+
+</head>
+<body ng-controller="main" ng-click="closeAll()">
+	<main>
+		<nav class="Navigation">
+			<div ng-click="showSmallViews($event)" class="NavigationSmallButton">
+				<div class="fa fa-bars"></div>
+			</div>
+			<div class="NavigationLeft">
+					<a href="/">
+						<img src="../img/icon.jpg">
+					</a>
+					<a href="/">
+						<span>Ecocul-tour</span>
+					</a>
+			</div>
+			<ul class="NavigationCenter">
+				<li class="NavigationItem" id="CloseSidebar" ng-click="closeAll()"><div class="fa fa-times"></div></li>
+				<li class="NavigationItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+				<li class="NavigationItem"><a href="/Objetivo">Objetivo</a></li>
+				<li class="NavigationItem">Desarrollo sustentable</li>
+			</ul>
+			<div class="NavigationBlocker"></div>
+		</nav>
+		<article class="MainPage">
+			<h1>Desarrollo Sustentable</h1>
+			<p>La sustentabilidad es de gran importancia ya que es la total administración eficiente y racional de todos los recursos. Uno de los principales retos que enfrenta México en materia de desarrollo sustentable es incluir al medio ambiente como uno de los elementos de la competitividad, el desarrollo ecónomico y social. El vínculo que existe entre el desarrollo sustentable, la protección al medio ambiente y el comercio internacional es muy estrecha. La preservación de la ecología y los avances científicos se han convertido en algunas de las prioridades de los miembros de la comunidad internacional.</p> 
+			<h2>¿Qué es el desarrollo Sustentable?</h2>
+			<p>Entre los factores clave del desarrollo sustentable, se encuentra el crecimiento poblacional, la demanda energética, el cambio climático, la escasez de recursos, del agua y el manejo de residuos.</p>
+			<p>El desarrollo sustentable se remota a los años 50, cuando germinan preocupaciones en torno a los daños al medio ambiente causados por la segunda guerra mundial. Sin embargo, es hasta 1987 cuando la Comisión Mundial del Medio Ambiente y del Desarrollo (CMMAD) de las Naciones Unidas, presidida por la Dra. Gro Harlem Brundtland, presenta el informe "Nuestro fututro común", conocido también como "Informe Brundtland", en el que se difunde y acuña la definición más conocida sobre el desarrollo sustentable. </p>
+			<p>"Desarrollo sustentable es aquel que satisface las necesidades del presente sin comprometer la capacidad de las generaciones futuras para satisfacer sus propias necesidades" (CMMAD, 1987:27).</p>
+			<p>El concepto desarrollo sustentable es el resultado de una acción concentrada de las naciones para impulsar un modelo de desarrollo económico mundial compatible con la conservación del medio ambiente y con la equidad social.</p>
+		</article>
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+		<ul class="FooterMenu">
+			<li class="FooterItem">Desarrollo sustentable</li>
+			<li class="FooterItem"><a href="/Objetivo">Objetivo</a></li>
+			<li class="FooterItem"><a href="/Proyectos">Proyectos sustentables</a></li>
+		</ul>
+		<p class="FooterCopyright">2016 Los Hobbits</p>
+	</footer>
+</body>
+</html>
