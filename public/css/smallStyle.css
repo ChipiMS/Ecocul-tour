@@ -16,6 +16,20 @@
 	padding-left: 16px;
 	padding-right: 16px;
 }
+.Home a{
+	color: white;
+	font-size: 10px;
+}
+.Home .Title{
+	padding: 10px;
+	background-color: white;
+	border-radius: 2px;
+	line-height: 25px;
+}
+.Home .Title img{
+	width: 25px;
+	height: 25px;
+}
 .ProjectTitle{
 	padding-left: 16px;
 	width: initial;
