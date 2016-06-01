@@ -74,10 +74,10 @@ app.get("/Proyectos/Estufa",function(req, res) {
 	res.sendfile(__dirname + '/public/html/estufa.html');
 });
 app.get("/Proyectos/Foto",function(req, res) {
-	res.sendfile(__dirname + '/public/html/Fotodegradacion.html');
+	res.sendfile(__dirname + '/public/html/fotodegradacion.html');
 });
 app.get("/Proyectos/Luxiuh",function(req, res) {
-	res.sendfile(__dirname + '/public/html/Luxiuh.html');
+	res.sendfile(__dirname + '/public/html/luxiuh.html');
 });
 app.get("/Proyectos/NAMA",function(req, res) {
 	res.sendfile(__dirname + '/public/html/proyecto5.html');
